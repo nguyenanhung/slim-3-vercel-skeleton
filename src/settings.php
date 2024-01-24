@@ -21,7 +21,8 @@ return [
         // Monolog settings
         'logger' => [
             'name' => 'app',
-            'path' => isset($_ENV['docker']) ? 'php://stdout' : LOGS_PATH . 'Log-' . date('Y-m-d') . '.log',
+//            'path' => isset($_ENV['docker']) ? 'php://stdout' : LOGS_PATH . 'Log-' . date('Y-m-d') . '.log',
+            'path' => 'php://stdout',
             'level' => Monolog\Logger::DEBUG,
         ],
         // Cấu hình Database
